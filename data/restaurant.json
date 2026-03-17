@@ -1,0 +1,18 @@
+{
+  "name": "The Corner Café",
+  "description": "A neighborhood café serving breakfast, lunch, and locally roasted coffee.",
+  "location": {
+    "street": "123 Main St",
+    "city": "Brooklyn",
+    "state": "NY",
+    "postal_code": "11201",
+    "country": "US"
+  },
+  "url": "https://example.com/the-corner-cafe",
+  "tags": ["cafe", "breakfast", "lunch", "coffee"],
+  "contact": {
+    "phone": "+1-718-555-0123",
+    "email": "hello@cornercafe.example",
+    "instagram": "https://instagram.com/thecornercafe"
+  }
+}
