@@ -20,6 +20,18 @@ def test_agent_card_paths_work():
     assert "skills" in direct.json()
 
 
+def test_agent_card_uses_base_url_from_env(monkeypatch):
+    monkeypatch.setenv("BASE_URL", "https://restaurant.example")
+
+    direct = client.get("/agent.json")
+    well_known = client.get("/.well-known/agent.json")
+
+    assert direct.status_code == 200
+    assert well_known.status_code == 200
+    assert direct.json()["url"] == "https://restaurant.example"
+    assert well_known.json()["url"] == "https://restaurant.example"
+
+
 def test_skill_md_returns_markdown():
     response = client.get("/skill.md")
 

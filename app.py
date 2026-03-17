@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Any
 
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse, PlainTextResponse
@@ -11,6 +13,8 @@ from fastapi.responses import JSONResponse, PlainTextResponse
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 SKILL_FILE = BASE_DIR / "skill.md"
+
+load_dotenv()
 
 app = FastAPI(
     title="Restaurant Endpoint Template",
@@ -52,12 +56,18 @@ def flatten_menu_items(menu: dict[str, Any]) -> list[dict[str, Any]]:
     return items
 
 
+def resolve_base_url(restaurant: dict[str, Any]) -> str:
+    configured_base_url = os.getenv("BASE_URL", "").strip()
+    if configured_base_url:
+        return configured_base_url
+    return restaurant.get("url", "")
+
+
 def build_agent_card(restaurant: dict[str, Any]) -> dict[str, Any]:
-    base_url = restaurant.get("url", "")
     return {
         "name": restaurant.get("name", "Restaurant"),
         "description": restaurant.get("description", ""),
-        "url": base_url,
+        "url": resolve_base_url(restaurant),
         "version": "1.0.0",
         "tags": restaurant.get("tags", []),
         "contact": restaurant.get("contact", {}),
