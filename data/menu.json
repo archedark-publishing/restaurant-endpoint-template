@@ -1,0 +1,56 @@
+{
+  "currency": "USD",
+  "sections": [
+    {
+      "name": "Breakfast",
+      "items": [
+        {
+          "name": "Avocado Toast",
+          "description": "Sourdough toast, smashed avocado, chili flakes, lemon.",
+          "price": "$11.00",
+          "tags": ["vegetarian", "vegan"]
+        },
+        {
+          "name": "Berry Oat Bowl",
+          "description": "Warm oats with seasonal berries and almond butter.",
+          "price": "$9.50",
+          "tags": ["vegan", "gluten-free"]
+        }
+      ]
+    },
+    {
+      "name": "Lunch",
+      "items": [
+        {
+          "name": "Grilled Chicken Sandwich",
+          "description": "Herb-marinated chicken, greens, tomato, aioli.",
+          "price": "$14.00",
+          "tags": []
+        },
+        {
+          "name": "Roasted Veggie Wrap",
+          "description": "Roasted vegetables, hummus, mixed greens in a spinach wrap.",
+          "price": "$12.00",
+          "tags": ["vegetarian"]
+        }
+      ]
+    },
+    {
+      "name": "Drinks",
+      "items": [
+        {
+          "name": "House Drip Coffee",
+          "description": "Medium roast, served hot or iced.",
+          "price": "$3.25",
+          "tags": ["vegan", "gluten-free"]
+        },
+        {
+          "name": "Matcha Latte",
+          "description": "Ceremonial matcha with your choice of milk.",
+          "price": "$5.75",
+          "tags": ["vegetarian"]
+        }
+      ]
+    }
+  ]
+}

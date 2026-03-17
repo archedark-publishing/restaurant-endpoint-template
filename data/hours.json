@@ -1,0 +1,23 @@
+{
+  "timezone": "America/New_York",
+  "weekly": {
+    "monday": "07:00-17:00",
+    "tuesday": "07:00-17:00",
+    "wednesday": "07:00-17:00",
+    "thursday": "07:00-19:00",
+    "friday": "07:00-19:00",
+    "saturday": "08:00-19:00",
+    "sunday": "08:00-16:00"
+  },
+  "special_closures": [
+    {
+      "date": "2026-12-25",
+      "reason": "Closed for Christmas Day"
+    },
+    {
+      "date": "2026-01-01",
+      "reason": "Closed for New Year's Day"
+    }
+  ],
+  "note": "Kitchen closes 30 minutes before listed closing time."
+}
